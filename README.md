@@ -1,4 +1,0 @@
-RecursiveLatticeExplorer
-========================
-
-Implemented in pyprocessing.
