@@ -24,6 +24,13 @@ class Application:
 	def draw(self):
 		print 'drawing...'
 
+
+	# Sets window size.
+	def setup(self):
+		dim = int(self.args["--size"])
+		size(dim, dim)
+
+
 	# Generates requested lattices, saving each to the dump
 	# directory. Prints updates to console so it doesn't 
 	# look frozen.
