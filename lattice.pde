@@ -81,7 +81,40 @@ class Lattice {
   void saveTo(String path){
     if(!path.endsWith(".png"))
       path += ".png";
-    buffer.save(path);
+    cropped().save(path);
+  }
+  
+  private PImage cropped(){
+    int s = 60;
+    int lm = leftMost();
+    int tm = topMost();
+    int l = max(0, lm - s);
+    int t = max(0, tm - s);
+    return buffer.get(l, t, buffer.width - 2*l, buffer.height - 2*t);
+  }
+    
+  private int leftMost(){
+    buffer.loadPixels();
+    for(int i = 0; i < buffer.width/2; i += 2){
+      for(int j = 0; j < buffer.height; j += 2){
+        if(buffer.pixels[i + j*buffer.width] != black)
+          return i;
+      }
+    }
+    return 0;
+  }
+  
+  private int topMost(){
+    buffer.loadPixels();
+    for(int j = 0; j < buffer.height/2; j += 2){
+      for(int i = 0; i < buffer.width; i += 2){
+        if(buffer.pixels[i + j*buffer.width] != black)
+          return j;
+      }
+    }
+    return 0;
   }
 }
+
+
   
