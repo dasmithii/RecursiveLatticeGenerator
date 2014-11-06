@@ -26,7 +26,7 @@ class GUI{
      .setFont(createFont("arial",15))
      .setFocus(true)
      .setColor(color(255,0,0))
-     .setText("saved-images")
+     .setText("samples")
      ;
   }
   
