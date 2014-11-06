@@ -19,7 +19,7 @@ void draw(){
 }
 
 
-public void skip(int n) {
+public void next(int n) {
   if(generator.prepared())
     generator.discard();
 }

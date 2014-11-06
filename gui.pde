@@ -14,7 +14,7 @@ class GUI{
        .setSize(70,50)
        .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER).setSize(15)
        ; 
-    cp5.addButton("skip")
+    cp5.addButton("next")
        .setValue(0)
        .setPosition(90,10)
        .setSize(70,50)
