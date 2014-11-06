@@ -17,6 +17,7 @@ class Application:
 	# at least one worker is permitted).
 	def prepare(self, args):
 		self.args = args
+		for i in range(1, )
 
 
 	# To be called on each frame update. Prompts user to
