@@ -2,7 +2,7 @@ GUI gui;
 Generator generator;
 
 void setup() {  
-  size(700, 700);
+  size(1000, 700);
   generator = new Generator();
   gui = new GUI(this);
   rectMode(CENTER);

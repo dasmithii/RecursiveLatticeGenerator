@@ -10,7 +10,7 @@ class Lattice {
     painter = new Painter();
     dimension = d;
     precision = p;
-    radius = width/3.2;
+    radius = (width+height)/6.5;
     angle = 2*PI/d;
     generate();
   }
