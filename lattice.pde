@@ -4,8 +4,10 @@ class Lattice {
   private float precision;
   private float radius;
   private float angle;
+  private Painter painter;
   
   Lattice(int d, float p){
+    painter = new Painter();
     dimension = d;
     precision = p;
     radius = width/3.2;
@@ -63,7 +65,7 @@ class Lattice {
     buffer.ellipse(0, 0, stretch/10, stretch/10);
     buffer.pushMatrix();
     for(int i = 0; i < dimension; ++i){
-      buffer.stroke(10 * stretch, 3 * stretch, 3 * stretch);
+      buffer.stroke(painter.paint(stretch));
       buffer.line(0, 0, stretch, 0);
     
       buffer.ellipse(-stretch, 0, stretch/10.0, stretch/10.0);
@@ -74,6 +76,12 @@ class Lattice {
       buffer.rotate(angle); 
     }
     buffer.popMatrix(); 
+  }
+  
+  void saveTo(String path){
+    if(!path.endsWith(".png"))
+      path += ".png";
+    buffer.save(path);
   }
 }
   

@@ -25,7 +25,25 @@ public void skip(int n) {
 }
 
 public void save(int n) {
-  println("todo...");
+  if(gui == null)
+    return;
+    
+  String path = gui.output();
+  File file = new File(path);
+  if(file.exists()){
+    if(file.isFile()){
+      println(" - ERROR: file already exists.");
+    } else{
+      saveInDirectory(file);
+    }
+  } else{
+    generator.saveTo(path);
+  }
 }
 
+void saveInDirectory(File dir){
+  String rand = "" + int(random(100000, 999999));
+  String path = new File(dir, rand + ".png").getPath();
+  generator.saveTo(path);
+}
 

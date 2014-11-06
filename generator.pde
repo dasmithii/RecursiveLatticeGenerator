@@ -83,6 +83,11 @@ class Generator{
     textAlign(LEFT, BOTTOM);
     text("buffer: " + buffer.size(), 10, height - 10);
   }
+  
+  void saveTo(String path){
+    if(front != null)
+      front.saveTo(path);
+  }
 }
 
 
