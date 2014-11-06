@@ -1,10 +1,14 @@
-import controlP5.*;
+import controlP5.*; // library to help with UI stuff
 
 
+// Two buttons: 'save' and 'next', plus a text box for the
+// output path 
 class GUI{
-  private ControlP5 cp5;
-  private Textfield field;
+  private ControlP5 cp5;   // UI context
+  private Textfield field; // output path
   
+  // Make two adjacent buttons: 'save' and 'next'. Below these,
+  // provide an input box where output path can be specified.
   GUI(processing.core.PApplet route){
     noStroke();
     cp5 = new ControlP5(route);  
@@ -30,12 +34,13 @@ class GUI{
      ;
   }
   
+  // Current output path, as specified by user.
   String output(){
      return field.getText();
   }
 }
 
-
-public void controlEvent(ControlEvent theEvent) {
-}
+// I don't remember what this is - something to do with
+// ControlP5..
+public void controlEvent(ControlEvent theEvent) {}
 
