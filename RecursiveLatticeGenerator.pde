@@ -1,13 +1,29 @@
-Lattice l;
+GUI gui;
+Generator generator;
 
 void setup() {  
-  size(500, 500);
-  l = new Lattice(3, 10);
+  size(700, 500);
+  gui = new GUI(this);
+  generator = new Generator();
 }
 
 
 void draw(){
   background(0);
-  l.display();
+  if(generator.prepared())
+    generator.display();
+  else
+    generator.loading();
 }
+
+
+public void skip(int n) {
+  if(generator.prepared())
+    generator.discard();
+}
+
+public void save(int n) {
+  println("TODO...");
+}
+
 
