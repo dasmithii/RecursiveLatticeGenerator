@@ -11,6 +11,8 @@ This is a program that generates neat-looking recursive lattices.
 
 
 # Samples
+![](samples/677018.png)
+
 ![](samples/234232.png)
 
 ![](samples/268255.png)

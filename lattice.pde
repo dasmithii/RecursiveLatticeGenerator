@@ -31,7 +31,7 @@ class Lattice {
   private void generate(){
     buffer = createGraphics(width*2, height*2);
     buffer.beginDraw();
-    buffer.background(0);
+    buffer.background(black);
     buffer.pushMatrix();
     buffer.translate(buffer.width/2, buffer.height/2);
     buffer.rotate(random(2*PI));
