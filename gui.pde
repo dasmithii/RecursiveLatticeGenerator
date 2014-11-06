@@ -1,8 +1,9 @@
 import controlP5.*;
-String lastfv = "saved-images";
+static String lasttf = "saved-images";
+
 
 class GUI{
-  ControlP5 cp5;
+  private ControlP5 cp5;
   
   GUI(processing.core.PApplet route){
     noStroke();
@@ -25,12 +26,12 @@ class GUI{
      .setFont(createFont("arial",15))
      .setFocus(true)
      .setColor(color(255,0,0))
-     .setText("saved-images")
+     .setText(lasttf)
      ;
   }
   
   String output(){
-     return lastfv;
+     return lasttf;
   }
 }
 
@@ -40,7 +41,7 @@ public void controlEvent(ControlEvent theEvent) {
 }
 
 public void output(String path) {
-  lastfv = path;
+  lasttf = path;
 }
 
 

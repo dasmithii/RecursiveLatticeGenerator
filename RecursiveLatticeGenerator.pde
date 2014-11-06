@@ -3,8 +3,10 @@ Generator generator;
 
 void setup() {  
   size(700, 500);
-  gui = new GUI(this);
   generator = new Generator();
+  gui = new GUI(this);
+  rectMode(CENTER);
+  textAlign(CENTER, CENTER);
 }
 
 
