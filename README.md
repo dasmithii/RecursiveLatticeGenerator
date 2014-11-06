@@ -10,15 +10,23 @@ This is a program that generates neat-looking recursive lattices.
 
 
 
-
 # Samples
-<img"samples/234232.png" alt="sample 1" style="width:200;height:200">
-<img"samples/268255.png" alt="sample 2" style="width:200;height:200">
-<img"samples/475271.png" alt="sample 3" style="width:200;height:200">
-<img"samples/595993.png" alt="sample 4" style="width:200;height:200">
-<img"samples/598779.png" alt="sample 5" style="width:200;height:200">
-<img"samples/628583.png" alt="sample 6" style="width:200;height:200">
-<img"samples/903029.png" alt="sample 7" style="width:200;height:200">
-<img"samples/918472.png" alt="sample 8" style="width:200;height:200">
-<img"samples/999399.png" alt="sample 10" style="width:200;height:200">
-<img"samples/202951.png" alt="sample 0" style="width:200;height:200">
+![](samples/234232.png)
+
+![](samples/268255.png)
+
+![](samples/475271.png)
+
+![](samples/595993.png)
+
+![](samples/598779.png)
+
+![](samples/628583.png)
+
+![](samples/903029.png)
+
+![](samples/918472.png)
+
+![](samples/999399.png)
+
+![](samples/202951.png)
