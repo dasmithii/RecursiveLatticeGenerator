@@ -8,21 +8,30 @@ class Lattice {
   Lattice(int d, float p){
     dimension = d;
     precision = p;
-    radius = width/3;
+    radius = width/3.2;
     angle = 2*PI/d;
     generate();
   }
   
   void display(){
-    image(buffer, 0, 0, width, height);
+    image(buffer, -width, -height, width * 3, height * 3);
+  }
+  
+  void display(float angle){
+    pushMatrix();
+    translate(width/2, height/2);
+    rotate(angle);
+    translate(-width/2, -height/2);
+    display();
+    popMatrix();
   }
   
   private void generate(){
-    buffer = createGraphics(width, height);
+    buffer = createGraphics(width*3, height*3);
     buffer.beginDraw();
     buffer.background(0);
     buffer.pushMatrix();
-    buffer.translate(width/2, height/2);
+    buffer.translate(buffer.width/2, buffer.height/2);
     buffer.rotate(random(2*PI));
     fractal(radius);
     buffer.popMatrix();

@@ -25,7 +25,7 @@ public void skip(int n) {
 }
 
 public void save(int n) {
-  println("TODO...");
+  println("todo...");
 }
 
 

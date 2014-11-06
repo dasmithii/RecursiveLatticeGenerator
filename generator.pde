@@ -22,9 +22,9 @@ class Generator{
   
   
   void display(){
-    angle = 0;
+    angle += .005;
     if(front != null){
-      front.display();
+      front.display(angle);
     }
   }
   
@@ -69,7 +69,7 @@ class Generator{
     }
   }
   
-  void worker(){
+  private void worker(){
     Thread thread = new Worker(this);
     thread.start();
   }
