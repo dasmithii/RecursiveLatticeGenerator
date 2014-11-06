@@ -1,9 +1,9 @@
 import controlP5.*;
-static String lasttf = "saved-images";
 
 
 class GUI{
   private ControlP5 cp5;
+  private Textfield field;
   
   GUI(processing.core.PApplet route){
     noStroke();
@@ -20,29 +20,22 @@ class GUI{
        .setSize(70,50)
        .getCaptionLabel().align(ControlP5.CENTER, ControlP5.CENTER).setSize(15)
        ;  
-    cp5.addTextfield("output")
+    field = cp5.addTextfield("output")
      .setPosition(10,70)
      .setSize(150,30)
      .setFont(createFont("arial",15))
      .setFocus(true)
      .setColor(color(255,0,0))
-     .setText(lasttf)
+     .setText("saved-images")
      ;
   }
   
   String output(){
-     return lasttf;
+     return field.getText();
   }
 }
 
 
 public void controlEvent(ControlEvent theEvent) {
-  // do nothing...
 }
-
-public void output(String path) {
-  lasttf = path;
-}
-
-
 

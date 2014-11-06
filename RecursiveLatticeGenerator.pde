@@ -37,8 +37,12 @@ public void save(int n) {
       saveInDirectory(file);
     }
   } else{
-    generator.saveTo(path);
+    if(path.endsWith(".png"))
+      generator.saveTo(path);
+    else
+      saveInDirectory(file);
   }
+  println("saved to: " + path);
 }
 
 void saveInDirectory(File dir){
