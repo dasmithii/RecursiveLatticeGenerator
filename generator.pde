@@ -111,7 +111,7 @@ class Worker extends Thread{
   
   private void generate(){
     int dimension = int(random(3, 8));
-    float precision = random(dimension-3,22) + 1;
+    float precision = max(random(dimension-3,22), 1);
     Lattice lattice = new Lattice(dimension, precision);
     parent.report(lattice);
   }
