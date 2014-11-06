@@ -1,6 +1,5 @@
 # Overview
 This is a program that generates neat-looking recursive lattices.
-![](samples/234817.png)
 
 
 
