@@ -11,7 +11,7 @@ class Generator{
   Generator(){
     buffer = new LinkedList<Lattice>();
     int cpus = Runtime.getRuntime().availableProcessors();
-    for(int i = 0; i < cpus + 1; ++i){
+    for(int i = 0; i < cpus + 2; ++i){
       worker();
     }
   }
@@ -89,9 +89,9 @@ class Worker extends Thread{
     while(parent.running()){
       if(parent.satisfied()){
         try{
-          sleep(750);
+          sleep(300);
         }catch(InterruptedException e){
-            System.out.println("interruption");
+            System.out.println("interruption?");
         }
       } else{
         generate();

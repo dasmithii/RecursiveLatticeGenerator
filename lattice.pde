@@ -14,7 +14,7 @@ class Lattice {
   }
   
   void display(){
-    image(buffer, -width, -height, width * 3, height * 3);
+    image(buffer, -width/2, -height/2, 2*width, 2*height);
   }
   
   void display(float angle){
@@ -27,7 +27,7 @@ class Lattice {
   }
   
   private void generate(){
-    buffer = createGraphics(width*3, height*3);
+    buffer = createGraphics(width*2, height*2);
     buffer.beginDraw();
     buffer.background(0);
     buffer.pushMatrix();
